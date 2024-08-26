@@ -1,0 +1,47 @@
+.box {
+  min-height: 50px;
+  padding: 0.5rem;
+  background-color: lightblue;
+  font-size: 1.5rem;
+  color: white;
+}
+
+body::after {
+  content: "<576px extra SM";
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  font-size: 1.1rem;
+  color: orange;
+}
+
+@media (min-width: 576px) {
+  body::after {
+    content: ">=576px SM";
+  }
+}
+
+@media (min-width: 768px) {
+  body::after {
+    content: ">=768px MD";
+  }
+}
+
+@media (min-width: 992px) {
+  body::after {
+    content: ">=992px LG";
+  }
+}
+
+@media (min-width: 1200px) {
+  body::after {
+    content: ">=1200px XL";
+  }
+}
+
+@media (min-width: 1400px) {
+  body::after {
+    content: ">=1400px XXL";
+  }
+}
